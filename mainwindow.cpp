@@ -61,6 +61,7 @@ void MainWindow::add_repo_event()
         ui->commit_btn->setEnabled(true);
         ui->terminal_btn->setEnabled(true);
         ui->status_btn->setEnabled(true);
+        ui->branch_btn->setEnabled(true);
 
         ui->add_repo_btn->setIcon( QIcon::fromTheme( "dialog-ok" ) );
 
@@ -101,6 +102,20 @@ void MainWindow::repo_status_event()
     QString status = git_status( repository );
 
     QMessageBox::information( this, "Git status", status, QMessageBox::Ok );
+}
+
+
+void MainWindow::on_branch_btn_clicked(bool checked)
+{
+    if(checked == 0)
+    {
+        QStringList items = git_branches(repository, QString("get_branches")).split('\n', QString::SkipEmptyParts);
+        QString selected = QInputDialog::getItem( this, "Choose a branch", "branch:", items );
+
+        // set selected branch as default
+        qDebug() << git_branches( repository, QString("set_current_branch"),
+                                  QString(selected) );
+    }
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)

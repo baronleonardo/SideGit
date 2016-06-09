@@ -56,7 +56,7 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,0,0,0,0">
+      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,0,0,0,0,0">
        <property name="spacing">
         <number>10</number>
        </property>
@@ -125,6 +125,46 @@
         </widget>
        </item>
        <item>
+        <widget class="QPushButton" name="status_btn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;git status - Preview current GIT repository state.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset theme="dialog-information">
+           <normaloff>.</normaloff>.</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="branch_btn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;checkout &amp;lt;branch&amp;gt; - go to another branch&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/branch.png</normaloff>icons/branch.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QPushButton" name="commit_btn">
          <property name="enabled">
           <bool>false</bool>
@@ -147,29 +187,6 @@
          </property>
          <property name="flat">
           <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="status_btn">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="toolTip">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;git status - Preview current GIT repository state.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset theme="dialog-information">
-           <normaloff>.</normaloff>.</iconset>
          </property>
         </widget>
        </item>

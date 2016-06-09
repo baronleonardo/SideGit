@@ -37,6 +37,9 @@ public slots:
     void repo_status_event();
     void open_terminal_event();
     void quit_event();
+
+private slots:
+    void on_branch_btn_clicked(bool checked);
 };
 
 #endif // MAINWINDOW_H
