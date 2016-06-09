@@ -4,7 +4,6 @@
 is_repo()
 {
     cd "$1"
-    echo "$1"
     git status &> /dev/null;
 
     if [ $? -ne 0 ]
