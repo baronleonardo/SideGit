@@ -13,18 +13,12 @@
   <property name="windowTitle">
    <string>SideGit</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">color: rgb(0, 0, 0);</string>
-  </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <property name="leftMargin">
