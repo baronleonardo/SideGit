@@ -7,6 +7,6 @@ a very simble side-panel git app
 - add or track files ( git add ) ( by adding them manually or drop them on the app )
 - commit
 - show current status of the repository
-- open termainla in the respoitory path
+- open terminal in the respoitory path
 
-### and the most important feature - you can drop files to add/track them
+### and the most important feature - you can drop files to add/track them ( you can even drag them from your favourate IDE )
