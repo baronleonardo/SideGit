@@ -4,6 +4,8 @@
 #include <QDebug>
 #include <QTextCodec>
 
+#define QByteArray_TO_QString(bArr) QTextCodec::codecForName("UTF-8")->toUnicode( bArr );
+
 bool git_is_repo( QString path )
 {
     /*// GIT
@@ -72,5 +74,16 @@ QString git_status(QString path)
 
     while(process.waitForFinished());
 
-    return QTextCodec::codecForName("UTF-8")->toUnicode( process.readAllStandardOutput() );
+    return QByteArray_TO_QString( process.readAllStandardOutput() );
+}
+
+QString git_branches(QString path, QString func_name, QString parameters)
+{
+    QProcess process;
+    process.start( "./git_branches.sh", QStringList() << func_name << path << parameters );
+//    process.setProcessChannelMode(QProcess::ForwardedChannels);
+
+    while(process.waitForFinished());
+
+    return QByteArray_TO_QString( process.readAllStandardOutput() );
 }

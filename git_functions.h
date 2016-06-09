@@ -8,5 +8,6 @@ void git_add( QString file_name );
 void git_commit( QString path, QString msg );
 void git_open_terminal_here(QString path);
 QString git_status(QString path);
+QString git_branches(QString path, QString func_name, QString parameters = "");
 
 #endif // GIT_FUNCTIONS_H
