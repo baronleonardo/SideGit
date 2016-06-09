@@ -1,6 +1,9 @@
 # SideGit
 a very simble side-panel git app
 
+![Alt Preview](images/preview.png?raw=true "Preview")
+<br />
+
 ##Features:
 - it acts like a side panel activated when you hover on the left side of the screen
 - open a git repository
