@@ -3,3 +3,4 @@ moc_*
 *.o
 Makefile
 SideGit
+SideGit.pro.user
