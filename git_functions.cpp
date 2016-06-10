@@ -35,10 +35,10 @@ bool git_is_repo( QString path )
     return true;
 }
 
-void git_add( QString file_name )
+void git_add( QString path, QString file_name )
 {
     QProcess process;
-    process.start( "./git_add.sh", QStringList() << file_name );
+    process.start( "./git_add.sh", QStringList() << path << file_name );
 //    process.setProcessChannelMode(QProcess::ForwardedChannels);
 
     while(process.waitForFinished());

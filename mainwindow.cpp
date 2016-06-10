@@ -37,6 +37,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     repository = QDir::homePath();
 
+    add_and_commit = false;
+
     // EVENTS
     connect( ui->add_repo_btn, SIGNAL(clicked(bool)), this, SLOT(add_repo_event()) );
     connect( ui->frame, SIGNAL(attempt_to_drop()), this, SLOT(drop_event()) );
@@ -70,6 +72,7 @@ void MainWindow::add_repo_event()
 
         // TODO: need a better implementation
         ui->add_files_btn->repository = repository;
+        ui->frame->repository = repository;
     }
 
     // if not
@@ -89,7 +92,15 @@ void MainWindow::drop_event()
 void MainWindow::commit_event()
 {
     QString msg =  QInputDialog::getMultiLineText( this, "Commit message", "message:");
-    git_commit(repository, msg);
+
+    if(add_and_commit == true)
+    {
+        git_add(repository, "all");
+        git_commit(repository, msg);
+    }
+
+    else
+        git_commit(repository, msg);
 }
 
 void MainWindow::open_terminal_event()
@@ -122,6 +133,15 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 {
     if(event->key() == Qt::Key_Escape)
         qApp->quit();
+
+    if(event->key() == Qt::Key_Control)
+        add_and_commit = true;
+}
+
+void MainWindow::keyReleaseEvent(QKeyEvent *event)
+{
+    if(event->key() == Qt::Key_Control)
+        add_and_commit = false;
 }
 
 void MainWindow::enterEvent(QEvent *event)

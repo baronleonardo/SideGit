@@ -4,7 +4,7 @@
 #include <QString>
 
 bool git_is_repo( QString path );
-void git_add( QString file_name );
+void git_add( QString path, QString file_name );
 void git_commit( QString path, QString msg );
 void git_open_terminal_here(QString path);
 QString git_status(QString path);

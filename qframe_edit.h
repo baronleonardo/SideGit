@@ -3,12 +3,16 @@
 
 #include <QObject>
 #include <QFrame>
+#include <QString>
 
 class QFrame_edit : public QFrame
 {
     Q_OBJECT
 public:
     QFrame_edit(QWidget* parnet = NULL);
+
+public:
+    QString repository;
 
 public slots:
     void dragEnterEvent(QDragEnterEvent *event);

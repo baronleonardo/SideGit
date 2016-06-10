@@ -37,6 +37,6 @@ void AddFiles_button::add_files_event()
 
     foreach (QString file_name, list)
     {
-        git_add( file_name );
+        git_add( repository, file_name );
     }
 }
