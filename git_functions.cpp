@@ -3,6 +3,7 @@
 //#include <git2.h>
 #include <QDebug>
 #include <QTextCodec>
+#include <QFile>
 
 #define QByteArray_TO_QString(bArr) QTextCodec::codecForName("UTF-8")->toUnicode( bArr );
 
