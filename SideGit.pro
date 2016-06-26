@@ -33,3 +33,6 @@ DISTFILES += \
     open_terminal_here.sh \
     git_status.sh \
     git_branches.sh
+
+RESOURCES += \
+    scripts.qrc
