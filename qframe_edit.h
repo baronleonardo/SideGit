@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QFrame>
 #include <QString>
+#include "git_functions.h"
 
 class QFrame_edit : public QFrame
 {
@@ -13,6 +14,9 @@ public:
 
 public:
     QString repository;
+
+private:
+    Scripts *scripts;
 
 public slots:
     void dragEnterEvent(QDragEnterEvent *event);

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QString>
+#include "git_functions.h"
 
 namespace Ui {
 class MainWindow;
@@ -20,11 +21,13 @@ private:
     Ui::MainWindow *ui;
 
 private:
+    Scripts *scripts;
     QString repository;
     const uint w_width_close = 2;
     const uint w_width_open = 46;
     const uint w_height = 300;
     bool add_and_commit;
+
 
 protected:
     void keyPressEvent(QKeyEvent *);

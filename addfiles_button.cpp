@@ -9,6 +9,8 @@ AddFiles_button::AddFiles_button(QWidget* parent) : QPushButton(parent)
 {
     connect( this, SIGNAL(clicked(bool)), this, SLOT(add_files_event()) );
     repository = "";
+
+    scripts = Scripts::get_Scribts_obj();
 }
 
 //void AddFiles_button::dragEnterEvent(QDragEnterEvent *event)
@@ -37,6 +39,6 @@ void AddFiles_button::add_files_event()
 
     foreach (QString file_name, list)
     {
-        git_add( repository, file_name );
+        scripts->git_add( repository, file_name );
     }
 }

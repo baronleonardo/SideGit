@@ -10,7 +10,6 @@
 #include <QMessageBox>
 #include <QMimeData>
 #include <QInputDialog>
-#include "git_functions.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -39,6 +38,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     add_and_commit = false;
 
+    // get the only object from Scripts class
+    scripts = Scripts::get_Scribts_obj();
+
     // EVENTS
     connect( ui->add_repo_btn, SIGNAL(clicked(bool)), this, SLOT(add_repo_event()) );
     connect( ui->frame, SIGNAL(attempt_to_drop()), this, SLOT(drop_event()) );
@@ -56,7 +58,7 @@ void MainWindow::add_repo_event()
         QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
 
     // if this is a git repository
-    if( git_is_repo( repository ) )
+    if( scripts->git_is_repo( repository ) )
     {
         ui->add_files_btn->setEnabled(true);
         ui->commit_btn->setEnabled(true);
@@ -95,22 +97,22 @@ void MainWindow::commit_event()
 
     if(add_and_commit == true)
     {
-        git_add(repository, "all");
-        git_commit(repository, msg);
+        scripts->git_add(repository, "all");
+        scripts->git_commit(repository, msg);
     }
 
     else
-        git_commit(repository, msg);
+        scripts->git_commit(repository, msg);
 }
 
 void MainWindow::open_terminal_event()
 {
-    git_open_terminal_here(repository);
+    scripts->git_open_terminal_here(repository);
 }
 
 void MainWindow::repo_status_event()
 {
-    QString status = git_status( repository );
+    QString status = scripts->git_status( repository );
 
     QMessageBox::information( this, "Git status", status, QMessageBox::Ok );
 }
@@ -120,11 +122,11 @@ void MainWindow::on_branch_btn_clicked(bool checked)
 {
     if(checked == 0)
     {
-        QStringList items = git_branches(repository, QString("get_branches")).split('\n', QString::SkipEmptyParts);
+        QStringList items = scripts->git_branches(repository, QString("get_branches")).split('\n', QString::SkipEmptyParts);
         QString selected = QInputDialog::getItem( this, "Choose a branch", "branch:", items );
 
         // set selected branch as default
-        qDebug() << git_branches( repository, QString("set_current_branch"),
+        qDebug() << scripts->git_branches( repository, QString("set_current_branch"),
                                   QString(selected) );
     }
 }

@@ -5,6 +5,7 @@
 #include <QDropEvent>
 #include <QString>
 #include <QList>
+#include "git_functions.h"
 
 class AddFiles_button : public QPushButton
 {
@@ -12,6 +13,9 @@ class AddFiles_button : public QPushButton
 
 public:
     QString repository;
+
+private:
+    Scripts *scripts;
 
 public:
     AddFiles_button(QWidget* parent = NULL);
