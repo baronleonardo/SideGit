@@ -26,13 +26,5 @@ HEADERS  += mainwindow.h \
 
 FORMS    += mainwindow.ui
 
-DISTFILES += \
-    git_add.sh \
-    git_check_repo.sh \
-    git_commit.sh \
-    open_terminal_here.sh \
-    git_status.sh \
-    git_branches.sh
-
 RESOURCES += \
     scripts.qrc
