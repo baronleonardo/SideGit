@@ -6,6 +6,17 @@
 
 #define QByteArray_TO_QString(bArr) QTextCodec::codecForName("UTF-8")->toUnicode( bArr );
 
+#define CMD "/bin/bash"
+
+QStringList build_args( QString script_path )
+{
+    QFile file(script_path);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+            exit(-1);
+
+    return QStringList() << "-c" << file.readAll() << "bash";
+}
+
 bool git_is_repo( QString path )
 {
     /*// GIT
@@ -22,7 +33,7 @@ bool git_is_repo( QString path )
     }*/
 
     QProcess process;
-    process.start( "./git_check_repo.sh", QStringList() << path );
+    process.start( CMD, QStringList() << build_args(":/scripts/git_check_repo.sh") << path );
 //    process.setProcessChannelMode(QProcess::ForwardedChannels);
 
     while(process.waitForFinished());
@@ -38,7 +49,7 @@ bool git_is_repo( QString path )
 void git_add( QString path, QString file_name )
 {
     QProcess process;
-    process.start( "./git_add.sh", QStringList() << path << file_name );
+    process.start( CMD, QStringList() << build_args(":/scripts/git_add.sh") << path << file_name );
 //    process.setProcessChannelMode(QProcess::ForwardedChannels);
 
     while(process.waitForFinished());
@@ -50,7 +61,7 @@ void git_add( QString path, QString file_name )
 void git_commit(QString path, QString msg)
 {
     QProcess process;
-    process.start( "./git_commit.sh", QStringList() << path << msg );
+    process.start( CMD, QStringList() << build_args(":/scripts/git_commit.sh") << path << msg);
 //    process.setProcessChannelMode(QProcess::ForwardedChannels);
 
     while(process.waitForFinished());
@@ -61,15 +72,18 @@ void git_commit(QString path, QString msg)
 void git_open_terminal_here(QString path)
 {
     QProcess process;
-    process.start( "./open_terminal_here.sh", QStringList() << path );
+    process.start( CMD, QStringList() << build_args(":/scripts/open_terminal_here.sh") << path );
 
     while(process.waitForFinished());
+
+    qDebug() << process.readAllStandardOutput();
+    qDebug() << process.readAllStandardError();
 }
 
 QString git_status(QString path)
 {
     QProcess process;
-    process.start( "./git_status.sh", QStringList() << path );
+    process.start( CMD, QStringList() << build_args(":/scripts/git_status.sh") << path );
 //    process.setProcessChannelMode(QProcess::ForwardedChannels);
 
     while(process.waitForFinished());
@@ -80,7 +94,7 @@ QString git_status(QString path)
 QString git_branches(QString path, QString func_name, QString parameters)
 {
     QProcess process;
-    process.start( "./git_branches.sh", QStringList() << func_name << path << parameters );
+    process.start( CMD, QStringList() << build_args(":/scripts/git_branches.sh") << func_name << path << parameters );
 //    process.setProcessChannelMode(QProcess::ForwardedChannels);
 
     while(process.waitForFinished());
