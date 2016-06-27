@@ -1,10 +1,10 @@
 <RCC>
-    <qresource prefix="/scripts">
-        <file>git_add.sh</file>
-        <file>git_branches.sh</file>
-        <file>git_check_repo.sh</file>
-        <file>git_commit.sh</file>
-        <file>git_status.sh</file>
-        <file>open_terminal_here.sh</file>
+    <qresource prefix="/">
+        <file>scripts/git_add.sh</file>
+        <file>scripts/git_branches.sh</file>
+        <file>scripts/git_check_repo.sh</file>
+        <file>scripts/git_commit.sh</file>
+        <file>scripts/git_status.sh</file>
+        <file>scripts/open_terminal_here.sh</file>
     </qresource>
 </RCC>
