@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>46</width>
-    <height>354</height>
+    <width>62</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -85,7 +85,7 @@
          </property>
          <property name="icon">
           <iconset resource="icons.qrc">
-           <normaloff>:/icons/open_repo.svg</normaloff>:/icons/open_repo.svg</iconset>
+           <normaloff>:/icons/open_repo</normaloff>:/icons/open_repo</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -117,7 +117,7 @@
          </property>
          <property name="icon">
           <iconset resource="icons.qrc">
-           <normaloff>:/icons/add_files.svg</normaloff>:/icons/add_files.svg</iconset>
+           <normaloff>:/icons/add_files</normaloff>:/icons/add_files</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -149,7 +149,7 @@
          </property>
          <property name="icon">
           <iconset resource="icons.qrc">
-           <normaloff>:/icons/status.svg</normaloff>:/icons/status.svg</iconset>
+           <normaloff>:/icons/status</normaloff>:/icons/status</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -172,7 +172,7 @@
          </property>
          <property name="icon">
           <iconset resource="icons.qrc">
-           <normaloff>:/icons/branch.svg</normaloff>:/icons/branch.svg</iconset>
+           <normaloff>:/icons/branch</normaloff>:/icons/branch</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -201,7 +201,7 @@
          </property>
          <property name="icon">
           <iconset resource="icons.qrc">
-           <normaloff>:/icons/commit.svg</normaloff>:/icons/commit.svg</iconset>
+           <normaloff>:/icons/commit</normaloff>:/icons/commit</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -233,7 +233,7 @@
          </property>
          <property name="icon">
           <iconset resource="icons.qrc">
-           <normaloff>:/icons/terminal.svg</normaloff>:/icons/terminal.svg</iconset>
+           <normaloff>:/icons/terminal</normaloff>:/icons/terminal</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -272,7 +272,7 @@
          </property>
          <property name="icon">
           <iconset resource="icons.qrc">
-           <normaloff>:/icons/quit.svg</normaloff>:/icons/quit.svg</iconset>
+           <normaloff>:/icons/quit</normaloff>:/icons/quit</iconset>
          </property>
          <property name="iconSize">
           <size>

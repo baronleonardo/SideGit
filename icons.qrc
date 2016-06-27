@@ -1,13 +1,13 @@
 <RCC>
     <qresource prefix="/">
-        <file>icons/add_files.svg</file>
-        <file>icons/branch.svg</file>
-        <file>icons/commit.svg</file>
-        <file>icons/commit-all.svg</file>
-        <file>icons/opened_repo.svg</file>
-        <file>icons/open_repo.svg</file>
-        <file>icons/quit.svg</file>
-        <file>icons/status.svg</file>
-        <file>icons/terminal.svg</file>
+        <file alias="icons/add_files">icons/add_files.svg</file>
+        <file alias="icons/branch">icons/branch.svg</file>
+        <file alias="icons/commit">icons/commit.svg</file>
+        <file alias="icons/commit-all">icons/commit-all.svg</file>
+        <file alias="icons/opened_repo">icons/opened_repo.svg</file>
+        <file alias="icons/open_repo">icons/open_repo.svg</file>
+        <file alias="icons/quit">icons/quit.svg</file>
+        <file alias="icons/status">icons/status.svg</file>
+        <file alias="icons/terminal">icons/terminal.svg</file>
     </qresource>
 </RCC>
