@@ -32,6 +32,7 @@ MainWindow::MainWindow(QWidget *parent) :
     int Y = (window_height / 2) - this->height() / 2;
 
     this->setGeometry( X, Y, w_width_close, w_height );
+    this->setFixedHeight( w_height );
     this->setFixedWidth( w_width_close );
 
     repository = QDir::homePath();
@@ -67,7 +68,7 @@ void MainWindow::add_repo_event()
         ui->status_btn->setEnabled(true);
         ui->branch_btn->setEnabled(true);
 
-        ui->add_repo_btn->setIcon( QIcon::fromTheme( "dialog-ok" ) );
+        ui->add_repo_btn->setIcon( QIcon(":/icons/opened_repo.svg") );
 
         // enable droping
         ui->frame->setAcceptDrops(true);
@@ -137,13 +138,23 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         qApp->quit();
 
     if(event->key() == Qt::Key_Control)
+    {
+        if( ui->commit_btn->isEnabled() == true )
+            ui->commit_btn->setIcon( QIcon(":/icons/commit-all.svg") );
+
         add_and_commit = true;
+    }
 }
 
 void MainWindow::keyReleaseEvent(QKeyEvent *event)
 {
     if(event->key() == Qt::Key_Control)
+    {
+        if( ui->commit_btn->isEnabled() == true )
+            ui->commit_btn->setIcon( QIcon(":/icons/commit.svg") );
+
         add_and_commit = false;
+    }
 }
 
 void MainWindow::enterEvent(QEvent *event)

@@ -25,7 +25,7 @@ private:
     QString repository;
     const uint w_width_close = 2;
     const uint w_width_open = 46;
-    const uint w_height = 300;
+    const uint w_height = 345;
     bool add_and_commit;
 
 
