@@ -2,7 +2,6 @@
 a very simble side-panel git app
 
 ![Alt Preview](images/preview.png?raw=true "Preview")
-<br />
 
 ##NEW FEATURES
 - now if you press `ctrl` + commit button -> it will add all the uncommited files and will wait for the user-input message ( Adam Zahran idea ).
