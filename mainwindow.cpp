@@ -68,7 +68,7 @@ void MainWindow::add_repo_event()
         ui->status_btn->setEnabled(true);
         ui->branch_btn->setEnabled(true);
 
-        ui->add_repo_btn->setIcon( QIcon(":/icons/opened_repo.svg") );
+        ui->add_repo_btn->setIcon( QIcon(":/icons/opened_repo") );
 
         // enable droping
         ui->frame->setAcceptDrops(true);
@@ -140,7 +140,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     if(event->key() == Qt::Key_Control)
     {
         if( ui->commit_btn->isEnabled() == true )
-            ui->commit_btn->setIcon( QIcon(":/icons/commit-all.svg") );
+            ui->commit_btn->setIcon( QIcon(":/icons/commit-all") );
 
         add_and_commit = true;
     }
@@ -151,7 +151,7 @@ void MainWindow::keyReleaseEvent(QKeyEvent *event)
     if(event->key() == Qt::Key_Control)
     {
         if( ui->commit_btn->isEnabled() == true )
-            ui->commit_btn->setIcon( QIcon(":/icons/commit.svg") );
+            ui->commit_btn->setIcon( QIcon(":/icons/commit") );
 
         add_and_commit = false;
     }
