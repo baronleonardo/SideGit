@@ -37,7 +37,7 @@
      id="namedview47"
      showgrid="false"
      inkscape:zoom="6.9532167"
-     inkscape:cx="15.212265"
+     inkscape:cx="-14.414311"
      inkscape:cy="22.868142"
      inkscape:window-x="0"
      inkscape:window-y="25"
@@ -156,7 +156,7 @@
          id="feComposite4731-1" />
     </filter>
     <filter
-       style="color-interpolation-filters:sRGB"
+       style="color-interpolation-filters:sRGB;"
        inkscape:label="Drop Shadow"
        id="filter4721-7">
       <feFlood
@@ -184,8 +184,41 @@
          in="offset"
          in2="SourceGraphic"
          operator="in"
-         result="composite2"
+         result="fbSourceGraphic"
          id="feComposite4731-8" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix4213" />
+      <feFlood
+         id="feFlood4215"
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         in="fbSourceGraphic" />
+      <feComposite
+         id="feComposite4217"
+         in2="fbSourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur4219"
+         in="composite1"
+         stdDeviation="0"
+         result="blur" />
+      <feOffset
+         id="feOffset4221"
+         dx="0"
+         dy="0"
+         result="offset" />
+      <feComposite
+         id="feComposite4223"
+         in2="offset"
+         in="fbSourceGraphic"
+         operator="over"
+         result="composite2" />
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
@@ -252,7 +285,7 @@
          id="feComposite4731-8-8" />
     </filter>
     <filter
-       style="color-interpolation-filters:sRGB"
+       style="color-interpolation-filters:sRGB;"
        inkscape:label="Drop Shadow"
        id="filter4721-7-8">
       <feFlood
@@ -280,8 +313,41 @@
          in="offset"
          in2="SourceGraphic"
          operator="in"
-         result="composite2"
+         result="fbSourceGraphic"
          id="feComposite4731-8-6" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix4201" />
+      <feFlood
+         id="feFlood4203"
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         in="fbSourceGraphic" />
+      <feComposite
+         id="feComposite4205"
+         in2="fbSourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur4207"
+         in="composite1"
+         stdDeviation="0"
+         result="blur" />
+      <feOffset
+         id="feOffset4209"
+         dx="0"
+         dy="0"
+         result="offset" />
+      <feComposite
+         id="feComposite4211"
+         in2="offset"
+         in="fbSourceGraphic"
+         operator="over"
+         result="composite2" />
     </filter>
   </defs>
   <g
@@ -394,7 +460,7 @@
        sodipodi:role="line"
        id="tspan4245"
        x="21.572748"
-       y="42.103451"></tspan></text>
+       y="42.103451" /></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4721-7-8)"

@@ -37,9 +37,9 @@
      inkscape:window-height="701"
      id="namedview47"
      showgrid="false"
-     inkscape:zoom="9.8333334"
-     inkscape:cx="23.305063"
-     inkscape:cy="15.818621"
+     inkscape:zoom="3.4766084"
+     inkscape:cx="-31.163303"
+     inkscape:cy="0.25949278"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
@@ -89,8 +89,41 @@
          in="offset"
          in2="SourceGraphic"
          operator="in"
-         result="composite2"
+         result="fbSourceGraphic"
          id="feComposite4767" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix4150" />
+      <feFlood
+         id="feFlood4152"
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         in="fbSourceGraphic" />
+      <feComposite
+         id="feComposite4154"
+         in2="fbSourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur4156"
+         in="composite1"
+         stdDeviation="0"
+         result="blur" />
+      <feOffset
+         id="feOffset4158"
+         dx="0"
+         dy="0"
+         result="offset" />
+      <feComposite
+         id="feComposite4160"
+         in2="offset"
+         in="fbSourceGraphic"
+         operator="over"
+         result="composite2" />
     </filter>
   </defs>
   <g

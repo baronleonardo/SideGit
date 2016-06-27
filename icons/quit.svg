@@ -11,7 +11,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="quit.svg">
+   sodipodi:docname="quit.svg"
+   inkscape:export-filename="/tmp/quit.svg.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <metadata
      id="metadata49">
     <rdf:RDF>
@@ -37,9 +40,9 @@
      inkscape:window-height="701"
      id="namedview47"
      showgrid="false"
-     inkscape:zoom="3.4766083"
-     inkscape:cx="11.492006"
-     inkscape:cy="26.736487"
+     inkscape:zoom="4.9166666"
+     inkscape:cx="55.292148"
+     inkscape:cy="19.081734"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
@@ -185,8 +188,41 @@
          in="offset"
          in2="SourceGraphic"
          operator="in"
-         result="composite2"
+         result="fbSourceGraphic"
          id="feComposite7417" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix5770" />
+      <feFlood
+         id="feFlood5772"
+         flood-opacity="1"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         in="fbSourceGraphic" />
+      <feComposite
+         id="feComposite5774"
+         in2="fbSourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur5776"
+         in="composite1"
+         stdDeviation="0"
+         result="blur" />
+      <feOffset
+         id="feOffset5778"
+         dx="0"
+         dy="0"
+         result="offset" />
+      <feComposite
+         id="feComposite5780"
+         in2="offset"
+         in="fbSourceGraphic"
+         operator="over"
+         result="composite2" />
     </filter>
   </defs>
   <g
