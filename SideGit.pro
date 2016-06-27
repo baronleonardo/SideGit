@@ -27,4 +27,5 @@ HEADERS  += mainwindow.h \
 FORMS    += mainwindow.ui
 
 RESOURCES += \
-    scripts.qrc
+    scripts.qrc \
+    icons.qrc
