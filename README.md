@@ -20,3 +20,5 @@ a very simble side-panel git app
 ##How to use:
 - method #1: open the project using `QtCreator IDE`
 - method #2: run ( in the path of SideGit ) `qmake` then `make` then `./SideGit`
+
+##The new icons are based on [Numix Icons](https://github.com/numixproject/numix-icon-theme-circle)
