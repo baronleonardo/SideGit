@@ -84,8 +84,14 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset theme="list-add">
-           <normaloff>.</normaloff>.</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/open_repo.svg</normaloff>:/icons/open_repo.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
          <property name="flat">
           <bool>false</bool>
@@ -110,8 +116,14 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset theme="document-new">
-           <normaloff>.</normaloff>.</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/add_files.svg</normaloff>:/icons/add_files.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
          <property name="flat">
           <bool>false</bool>
@@ -136,8 +148,14 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset theme="dialog-information">
-           <normaloff>.</normaloff>.</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/status.svg</normaloff>:/icons/status.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -153,8 +171,14 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>icons/branch.png</normaloff>icons/branch.png</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/branch.svg</normaloff>:/icons/branch.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -176,8 +200,14 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset theme="document-save">
-           <normaloff>.</normaloff>.</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/commit.svg</normaloff>:/icons/commit.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
          <property name="flat">
           <bool>false</bool>
@@ -202,8 +232,14 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset theme="terminal">
-           <normaloff>.</normaloff>.</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/terminal.svg</normaloff>:/icons/terminal.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -235,8 +271,14 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset theme="application-exit">
-           <normaloff>.</normaloff>.</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/quit.svg</normaloff>:/icons/quit.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -260,6 +302,8 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>
